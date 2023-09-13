@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>#WEAREVR</title>
+        <link rel="icon" href="favicon.png">
+        <meta name="description" content="WE ARE VR">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        
+        
+        <script src="scripts.ts" async defer></script>
+        <h1 class="herotext"><strong>#WEAREVR</strong></h1>
+        <h1 class="timer" id="timerText">undefined</h1>
+        <div>
+            <p id="playercount">undefined</p>
+
+          </div>
+
+          <script>
+            var countDownDate = new Date("Sep 23, 2023 17:00:00").getTime();
+            
+            function dateCompare(date1, date2){
+                return new Date(date2) > new Date(date1);
+            }
+            if(dateCompare(countDownDate, new Date().getTime())){
+                document.getElementById("timerText").innerHTML = "Event over, thank you for participating!";
+                throw new Error("event over");
+            }
+            
+            
+              var x = setInterval(function() {
+              var now = new Date().getTime();
+
+              var distance = countDownDate - now;
+            
+              
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+              document.getElementById("timerText").innerHTML = days + "d " + hours + "h "
+              + minutes + "m " + seconds + "s ";
+            
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timerText").innerHTML = "EVENT HAPPENING. GO GO GO!";
+              }
+              
+            }, 1000);
+            </script>
+
+            <div class="footer">
+                <footer>
+                    
+                    
+                    <a href="https://pixabay.com/sound-effects/ticking-clock-1-27477/">clock sound from pixabay</a>
+
+                    <div class="spacer"></div>
+                        <a href="legal.html">legal stuff</a>
+                    <div class="center">
+                    
+                        <p class="legaltext">This product is not affiliated with Gorilla Tag or Another Axiom LLC and is not endorsed or otherwise sponsored by Another Axiom LLC. Portions of the materials contained herein are property of Another Axiom LLC. © 2021 Another Axiom LLC.</p>
+                    </div>
+                </footer>
+                
+            </div>
+    
+        
+    </body>
+</html>
