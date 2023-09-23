@@ -24,19 +24,19 @@
           <script>
         
             
-            var countDownDate = new Date("Sep 23, 2023 17:00:00");
+            var countDownDate = new Date(Date.UTC(2023, 8, 23, 17, 0, 0)).getTime();
             
             function dateCompare(date1, date2){
                 return new Date(date2) > new Date(date1);
             }
-            if(dateCompare(countDownDate, new Date())){
+            if(dateCompare(countDownDate, new Date().getTime())){
                 document.getElementById("timerText").innerHTML = "Event over, thank you for participating!";
                 throw new Error("event over");
             }
             
             
               var x = setInterval(function() {
-              var now = new Date();
+              var now = new Date().getTime();
 
               var distance = countDownDate - now;
             
