@@ -22,19 +22,21 @@
           </div>
 
           <script>
-            var countDownDate = new Date("Sep 23, 2023 17:00:00").getTime();
+        
+            
+            var countDownDate = new Date("Sep 23, 2023 17:00:00");
             
             function dateCompare(date1, date2){
                 return new Date(date2) > new Date(date1);
             }
-            if(dateCompare(countDownDate, new Date().getTime())){
+            if(dateCompare(countDownDate, new Date())){
                 document.getElementById("timerText").innerHTML = "Event over, thank you for participating!";
                 throw new Error("event over");
             }
             
             
               var x = setInterval(function() {
-              var now = new Date().getTime();
+              var now = new Date();
 
               var distance = countDownDate - now;
             
