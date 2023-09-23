@@ -9,13 +9,26 @@
         <meta name="description" content="WE ARE VR">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheet.css">
+        <script src="jquery-3.7.1.js"></script>
+        <script src="scripts.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     </head>
     <body>
-        
+      <audio controls id="tick" allow="autoplay" hidden="hidden">
+        <source src="tick.wav" type="audio/wav">
+      Your browser does not support the audio element.
+      </audio>
         
         <script src="scripts.js" async defer></script>
-        <h1 class="herotext"><strong>#WEAREVR</strong></h1>
+        <button type="button"><span class="material-symbols-outlined" hidden="hidden">
+          volume_off
+          </span></button>
+        
+        <h1 class="herotext"><strong>#WEAREVR</strong>  </h1>
+        
+        
         <h1 class="timer" id="timerText">undefined</h1>
+        <p class="playercount" id="playercount"></p>
         <div>
             
 
@@ -36,15 +49,7 @@
             
             
               var x = setInterval(function() {
-              //var now = new Date().toUTCString().getTime();
-              var now = new Date(Date.UTC(
-                new Date().getUTCFullYear(),
-                new Date().getUTCMonth(),
-                new Date().getUTCDate(),
-                new Date().getUTCHours(),
-                new Date().getUTCMinutes(),
-                new Date().getUTCSeconds()
-                ));
+              var now = new Date().getTime();
 
               var distance = countDownDate - now;
             
@@ -71,7 +76,7 @@
                     
                     
 
-                    <a href="https://xenonorsomething.github.io/wearevr/nolegal">X</a>
+                    
                     
                     </script>
                     <div class="center">

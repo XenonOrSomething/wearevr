@@ -33,6 +33,7 @@ h1{
     text-align: center;
 }
 
+
 .timer{
     background: linear-gradient(to right, #8fb3ff, #d41d6d);
     -webkit-background-clip: text;
@@ -41,6 +42,17 @@ h1{
     text-align: center;
     font-size: 50px;
     padding-top: -50px;
+}
+
+button{
+    position: absolute;
+
+
+}
+
+.tick{
+    padding-left: 69420;
+    margin-left: 69420;
 }
 
 .footer{
