@@ -8,7 +8,7 @@ console.log("WE ARE VR!");
     var audio = document.getElementById("tick");
     audio.play();
     $.ajax({
-      url: "https://cors-anywhere.herokuapp.com/https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v0001/?appid=1533390", 
+      url: "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v0001/?appid=1533390", 
       dataType: "json",
       success: function(data) {
         
